@@ -7,6 +7,7 @@
 - This would mean delving into the different layers, i.e. *Consensus, Execution, Settlement, Data availability*.
 
 > Maybe include a graphic from somewhere like [canva.com](www.canva.com) that shows a monolithic blockchain's architecture.
+> I have experience making graphics like these.
 
 - Now that the reader understands what a monolithic blockchain is, we tell them that the next section talks about how some current solutions that secure millions in value leverage the power of modularity.
 - This brings us to Rollups.
