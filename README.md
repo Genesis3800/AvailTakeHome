@@ -40,10 +40,12 @@
 - ***Cue Avail***.
 
 - Avail is a consensus agnostic, unopinionated data availability layer that can serve all types of blockchains and rollups.
+- Avail is ***NOT a blockchain***. Really drive this point home by mentioning the fact that while the main attack vector on Ethereum/bitcoin would be the double spend attack, **the main attack vector on Avail would be to make the data unavailable**.
 - Avail is a data availability layer that appends new data to the network in the same way as a blockchain, and does so using the POS consensus mechanism, but ***does not*** execute any transactions.
 - Avail implements fraud proofs to ensure that the data posted to the network is correct, and also uses a slashing mechanism to disincentivize bad actors.
 - To make sure that running an avail node is as cheap as possible, Avail allows validators/node operators to participate in any of the 3 capacities: ***Light nodes, Full nodes, and validators***.
-- Talk about how Avail would make it very simple for '*applications*' built on top of it to download data, because each application will have a unique identifier, akin to a traditional ChainID, that will allow it to work with only the data relvant to it from within the Avail network. 
+- Talk about how Avail would make it very simple for '*applications*' built on top of it to download data, because each application will have a unique identifier, akin to a traditional ChainID, that will allow it to work with only the data relvant to it from within the Avail network.
+- Also talk about how light clients can be assured of data availability without having to trust a full node because of data availability sampling. While the surety can never be 100%, it can be very close to it depending on how many times the data fetching operation is performed.
 - Lastly, we can talk about some types of rollup architectures possible with Avail that have been built in-house by the Avail team:
 for example the [op-EVM](https://github.com/availproject/op-evm).
 
