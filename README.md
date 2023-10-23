@@ -58,3 +58,5 @@ Please create the following:
 - Lets get even more creative. What if, we do the same execution off-chain, but do not post any sort of data or ZK proof to Ethereum through a smart contract? What if we posted that data to an independent data availability layer? This is what Sovereign Rollups do.
 
 > This is where the concept of an independent data availability layer should start making sense to the reader, and how it opens up a realm of possibilities.
+
+> Finally to deal the ***coup de grace***, we expose the reader to the possibility of a data availability layer that can serve all of these different types of Rollups simultaneously. This is where Avail comes in.
