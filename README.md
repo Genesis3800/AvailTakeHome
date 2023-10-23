@@ -37,7 +37,9 @@
 
 ## Avail
 
-- Avail is a consensus agnostic, unpointed data availability layer that can serve all types of blockchains and rollups.
+- ***Cue Avail***.
+
+- Avail is a consensus agnostic, unopinionated data availability layer that can serve all types of blockchains and rollups.
 - Avail is a data availability layer that appends new data to the network in the same way as a blockchain, and does so using the POS consensus mechanism, but ***does not*** execute any transactions.
 - Avail implements fraud proofs to ensure that the data posted to the network is correct, and also uses a slashing mechanism to disincentivize bad actors.
 - To make sure that running an avail node is as cheap as possible, Avail allows validators/node operators to participate in any of the 3 capacities: ***Light nodes, Full nodes, and validators***.
