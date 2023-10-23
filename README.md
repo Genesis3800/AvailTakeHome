@@ -22,7 +22,7 @@
 ## Why bother with data availability?
 
 - The previous section showed how Rollups can take on the responsibility of executing transactions, and that it may be possible to take on the responsibility of data availability. But why should we bother with doing that?
-- We remind the users that storing data on Ethereum is expensive, and that is a bottleneck. Ethereum's architecture by design disincentivizes storing large amounts of on-chain data.
+- We remind the users that while executing txns off-chain scales blockchains significantly, data availability is still a bottleneck. Ethereum's architecture by design disincentivizes storing large amounts of on-chain data.
 - This means if some other project takes on the responsibility of becoming the data availability layer, new possibilities open up.
 
 - Cue *Validiums* and *Sovereign Rollups*.
@@ -32,9 +32,15 @@
 - Lets get even more creative. What if, we do the same execution off-chain, but do not post any sort of data or ZK proof to Ethereum through a smart contract? What if we posted that data to an independent data availability layer? This is what Sovereign Rollups do.
 
 > This is where the concept of an independent data availability layer should start making sense to the reader, and how it opens up a realm of possibilities.
-
 > Finally to deal the ***coup de grace***, we expose the reader to the possibility of a data availability layer that can serve all of these different types of Rollups simultaneously. This is where Avail comes in.
+> Also, include another fancy graphic that shows different kinds of blockchains posting to Avail as a data availability layer.
 
 ## Avail
 
-- Avail is a consensus agnostic, unpointed data availability layer that can serve all types of Rollups. 
+- Avail is a consensus agnostic, unpointed data availability layer that can serve all types of blockchains and rollups.
+- Avail is a data availability layer that appends new data to the network in the same way as a blockchain, and does so using the POS consensus mechanism, but ***does not*** execute any transactions.
+- Avail implements fraud proofs to ensure that the data posted to the network is correct, and also uses a slashing mechanism to disincentivize bad actors.
+- To make sure that running an avail node is as cheap as possible, Avail allows validators/node operators to participate in any of the 3 capacities: ***Light nodes, Full nodes, and validators***.
+
+- Lastly, we can talk about some types of rollup architectures possible with Avail that have been built in-house by the Avail team:
+for example the [op-EVM](https://github.com/availproject/op-evm).
