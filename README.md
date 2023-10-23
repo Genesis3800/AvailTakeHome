@@ -39,8 +39,22 @@ Please create the following:
 
 ### Rollups
 
-- We expect the reader to be familiar with projects like Scroll and Optimism, and the basic consensus differences between them.
-- We talk about how Rollups are a great way to scale Ethereum, and how they are essentialy taking on the responsibility of executing transactions while still using Ethereum as the settlement layer.
+- We expect the reader to be familiar with projects like Scroll and Optimism, and the basic consensus differences between them. As in the reader should know that Scroll uses ZK proofs and Optimism uses an Optimistic approach.
+- We talk about how Rollups are a great way to scale Ethereum, and how they are essentially taking on the responsibility of executing transactions while still using Ethereum as the settlement layer.
 - This means it is perfectly possible to take on at least one of Ethereum's responsibilities.
 
 - What if there was a project that took on some of the other responsibilities of Ethereum, say for example **data availability** ?
+
+### Why bother with data availability?
+
+- The previous section showed how Rollups can take on the responsibility of executing transactions, and that it may be possible to take on the responsibility of data availability. But why should we bother with doing that?
+- We remind the users that storing data on Ethereum is expensive, and that is a bottleneck. Ethereum's architecture by design disincentivizes storing large amounts of on-chain data.
+- This means if some other project takes on the responsibility of becoming the data availability layer, new possibilities open up.
+
+- Cue *Validiums* and *Sovereign Rollups*.
+
+- ZK rollups use ZK proofs to attest to the correctness of the data, and also store data on-chain, thus using Ethereum as the data availability layer. What if we still posted ZK proofs to attest to data correctness to on-chain contracts, but stored the data off-chain? This is what Validiums do.
+
+- Lets get even more creative. What if, we do the same execution off-chain, but do not post any sort of data or ZK proof to Ethereum through a smart contract? What if we posted that data to an independent data availability layer? This is what Sovereign Rollups do.
+
+> This is where the concept of an independent data availability layer should start making sense to the reader, and how it opens up a realm of possibilities.
